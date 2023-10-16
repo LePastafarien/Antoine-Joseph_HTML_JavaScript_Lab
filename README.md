@@ -1,1 +1,1 @@
-[# Antoine-Joseph_HTML_JavaScript_Lab](https://lepastafarien.github.io/Antoine-Joseph_HTML_JavaScript_Lab/)
+https://lepastafarien.github.io/Antoine-Joseph_HTML_JavaScript_Lab/
