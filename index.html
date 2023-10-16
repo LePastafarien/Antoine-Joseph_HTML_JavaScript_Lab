@@ -15,9 +15,11 @@
             var numOfCourses =parseInt(input);
             const courseMarks = [];
             for (let i = 1; i <= numOfCourses; i++){
-                courseMarks[i-1] = prompt("Enter your mark for course "+ i);
+                courseMarks.push(parseInt(prompt("Enter your mark for course "+ i)));
             }
-            document.write("<p>Good "+courseMarks+" </p>");
+            for (let i = 0; i < numOfCourses; i++){
+            document.write("<p>"+courseMarks[i]+"</p>");
+            }
         }
      </script>
 </body>
