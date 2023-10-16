@@ -6,6 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-     
+     <script>
+        input = (prompt("How many courses did you finish?",0));
+        if (isNaN(input)){
+            document.write("<p>Invalid Input!</p>")
+        }
+        else{
+            var numOfCourses =parseInt(input);
+            const courseMarks = [];
+            for (let i = 1; i <= numOfCourses; i++){
+                courseMarks[i-1] = prompt("Enter your mark for course "+ i);
+            }
+            document.write("<p>Good "+courseMarks+" </p>");
+        }
+     </script>
 </body>
 </html>
