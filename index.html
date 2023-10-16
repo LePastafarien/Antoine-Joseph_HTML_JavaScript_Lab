@@ -1,26 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-     <script>
-        input = (prompt("How many courses did you finish?",0));
-        if (isNaN(input)){
+    <script>
+        input = (prompt("How many courses did you finish?", 0));
+        if (isNaN(input)) {
             document.write("<p>Invalid Input!</p>")
         }
-        else{
-            var numOfCourses =parseInt(input);
+        else {
+            var numOfCourses = parseInt(input);
             const courseMarks = [];
-            for (let i = 1; i <= numOfCourses; i++){
-                courseMarks.push(parseInt(prompt("Enter your mark for course "+ i)));
+            var totalMarks = 0;
+            for (let i = 1; i <= numOfCourses; i++) {
+                courseMarks.push(parseInt(prompt("Enter your mark for course " + i)));
             }
-            for (let i = 0; i < numOfCourses; i++){
-            document.write("<p>"+courseMarks[i]+"</p>");
+            for (let i = 0; i < numOfCourses; i++) {
+                document.write("<p>" + courseMarks[i] + "</p>");
+                totalMarks += courseMarks[i];
             }
+            var average = totalMarks / numOfCourses;
+            average = average.toFixed(2);
+            switch (true) {
+                case 100 >= average && average >= 90:
+                    {
+                        document.write("<p>Your final average is " + average + ". Your grade is A+</p>");
+                    }
+                    break
+                case 89 >= average && average >= 80:
+                    {
+                        document.write("<p>Your final average is " + average + ". Your grade is B</p>");
+                    }
+                    break
+                case 79 >= average && average >= 70:
+                    {
+                        document.write("<p>Your final average is " + average + ". Your grade is C</p>");
+                    }
+                    break
+                case 69 >= average && average >= 60:
+                    {
+                        document.write("<p>Your final average is " + average + ". Your grade is D</p>");
+                    }
+                    break
+                case 59 >= average && average >= 0:
+                    {
+                        document.write("<p>Your final average is " + average + ". Your grade is F</p>");
+                    }
+                    break
+                default:
+                    document.write("<p>Sorry, All the marks have to be from minimum 0 to maximum 100!</p>");
+            }
+
+
         }
-     </script>
+    </script>
 </body>
+
 </html>
